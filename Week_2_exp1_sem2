@@ -1,0 +1,56 @@
+import java.io.*;
+import java.util.*;
+
+//  Task 1: find the total length of the string A+B
+
+    public class week2_exp1_sem2{
+    public static void main(String[] args) {
+                      Scanner sc = new Scanner(System.in);
+                               String a1,b1,c1,a2,b2,c2,i,i1,I1;
+        //sc.next();
+        // sc.next();
+                               String A = "hello";          String B = "java";
+//Finding the length of each of the string
+                               int len1 = A.length();       int len2 = B.length();
+// Finding the sum of lenghts
+                               int Tlen = len1 + len2;      int I = A.compareTo(B);
+  
+                               System.out.print(Tlen+"\n");
+
+        if (I<0){
+
+            System.out.print("No\n")  ;
+
+        }
+        else if (I==0){
+
+            System.out.print("No\n");
+        }
+
+        else{
+            System.out.print("Yes\n");
+        }
+        // String Asb = A.substring(0,1);
+        String Ac = A.substring(0,1).toUpperCase();
+        A = A.substring(1,len1);
+        A =Ac+A;
+
+        // String Bsb = B.substring(0,1);
+        String Bc = B.substring(0,1).toUpperCase();
+        B = B.substring(1,len2);
+        B= Bc + B;
+
+       String  A1 = A.replace("h","H");
+       String  B1= B.replace("j","J");
+        String AB = A+" "+B;
+        System.out.print(AB+"\n");
+        // Printing a sequence , separated by &
+        String seq= String.join("-","1","2","3","4","5");
+        System.out.print(seq+"\n") ;
+        System.out.print("Logic 2 :"+A+" "+B);
+  String m = "    Spaced sample  ";
+       a1 = m.trim();
+
+        System.out.print("using 'trim()' function "+"Trimmed sample:"+a1);
+    }
+}
