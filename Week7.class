@@ -1,0 +1,60 @@
+public class Week_7 {
+public static class VIT_oil_corporation{
+    int Petrol,Ptrolvol;
+    double Diesel,Dslvol;
+
+    VIT_oil_corporation(int Ptrolvol,int Petrol,Double Dslvol,Double Diesel){
+       this.Diesel=Diesel;
+       this.Petrol=Petrol;
+       this.Ptrolvol=Ptrolvol;
+       this.Dslvol=Dslvol;
+    }
+
+    double Tot_Cal(){
+        double totv=Dslvol+Ptrolvol;
+        return totv;
+
+}
+double total_profit(){
+        double tot=Diesel+Petrol;
+        return tot;
+}
+
+}
+
+    public static void main(String args[]){
+
+        VIT_oil_corporation d1=new VIT_oil_corporation(50,2500,52.20,2366.226);
+        VIT_oil_corporation d2=new VIT_oil_corporation(75,4125,65.48,39994.28);
+        VIT_oil_corporation d3=new VIT_oil_corporation(63,3780,78.24,5085.6);
+        VIT_oil_corporation d4=new VIT_oil_corporation(45,2925,82.65,6196.75);
+        VIT_oil_corporation d5=new VIT_oil_corporation(65,4225,76.52,4438.16);
+
+    VIT_oil_corporation[] a= new VIT_oil_corporation[5];
+
+    a[0]=d1;
+    a[1]=d2;
+    a[2]=d3;
+    a[3]=d4;
+    a[4]=d5;
+        System.out.println("Welcome to VITAP Oil corp");
+        System.out.println("Statistics of oil production in 5 days");
+for(int i=0;i<5;i++){
+
+    int l=i+1;
+    double tp=a[i].total_profit(),tc=a[i].Tot_Cal();
+    double vtp=tp*51/100,dbp=tp*49/100;
+      vtp=Math.round(vtp);
+      dbp=Math.round(dbp);
+      tp=Math.round(tp);
+      tc=Math.round(tc);
+
+
+   System.out.println("Day "+l+"\t Consumed fuel: "+tc+"\t"+"\tTotal profit: "+tp+"\tVIT AP Share: "+vtp+"\tDistributor's Share: "+dbp);
+
+
+}
+}
+}
+
+
