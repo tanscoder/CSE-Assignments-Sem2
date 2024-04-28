@@ -1,0 +1,79 @@
+public class Week5 {
+
+    static class Poem{
+        String name;
+        int lines=0;
+        Poem(String Title) {
+
+            this.name = Title;
+
+        }
+    }
+    static class Couplet extends Poem {
+        int lines=2;
+        Couplet(String Title){
+            super(Title);
+
+        }
+        void printdt(){
+            System.out.print("The Couplet, "+name+" has "+lines+" lines\n");
+        }
+    }
+
+    static class Haiku extends Poem {
+        //  String name;
+        int lines=3;
+
+
+        Haiku(String Title) {
+
+            super(Title);
+
+        }
+        void printdt() {
+
+
+            System.out.print("The Haiku, "+name+" has "+lines+" lines\n");
+
+
+        }
+    }
+    static  class Limerick extends Poem {
+        int lines=7;
+        Limerick(String Title) {
+
+
+            super(Title);
+        }
+
+
+        void printdt() {
+
+
+            System.out.print("The Limerick, "+ name+" has "+lines+ " lines \n");
+
+
+        }
+    }
+
+
+    public static void main(String[] args) {
+
+
+        Couplet c1 = new Couplet("name1");
+//    couplet;
+
+
+        Limerick l1 = new Limerick("name2");
+
+
+        Haiku h1 = new Haiku("name3");
+
+
+        c1.printdt();
+        l1.printdt();
+        h1.printdt();
+
+
+    }
+}
