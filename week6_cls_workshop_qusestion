@@ -1,0 +1,75 @@
+
+import  java.util.*;
+
+
+public class Week_6 {
+    static class customerr  extends Exception{
+        customerr(String Errmsg) {
+            super(Errmsg);
+        }
+    }
+    public static void main(String args[]) throws customerr{
+        // assuming all are 23 batch and are BCE
+        int reg;
+        boolean p;
+        int p1;
+        Scanner sc=new Scanner(System.in);
+        //reg=223478;//5555;
+        System.out.print("Enter the digits after BCE in your registration number: ");
+        reg=sc.nextInt();
+
+
+        String sr=""+reg;//changing int to string
+try{
+        int l=sr.length();
+        System.out.printf("");
+        try{
+        while (l!=4&l!=5)
+        {   throw new customerr("\"Please enter a valid registration number, ie. 4 digit or 5 digit\\n\"");
+//            reg=sc.nextInt();
+//            sr=""+reg;
+//            l= sr.length();
+        }}
+        catch(customerr e1){
+            System.out.printf("Error: "+e1.getMessage());
+            reg=sc.nextInt();
+            sr=""+reg;
+            l= sr.length();
+
+        }
+
+        // p1=1;
+        System.out.print("\nEnter the number of the backlogs left: ");
+        p1= sc.nextInt();
+
+
+        String Str;
+        try{
+            if (p1!=0) {
+                throw new customerr("\n you are not allowed for the workshop\n");
+            }
+            else {
+                System.out.print(" Welcome to  workshop on ") ;
+                if(reg%2==0){
+                    Str=" Machine learning ";
+                    System.out.print(" Machine learning ");
+                }
+                else{
+                    Str=" Blockchain Technology ";
+                    System.out.print(" Blockchain Technology ");
+                }
+                System.out.printf(" Have fun! ");}
+
+        }
+        catch (customerr e) {
+            System.out.printf(e.getMessage());
+        }
+    }
+      catch (Exception E){
+
+    System.out.printf(E.getMessage());
+
+    }
+
+    }
+}
