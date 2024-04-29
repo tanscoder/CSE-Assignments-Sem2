@@ -1,13 +1,13 @@
 
 import java.util.*;
-
+//import java.util.ArrayList;
 
 public class Week7 {
 public static class VIT_oil_corporation{
  static class day{
 	public 	int petrol_price,petrol_vol;
 	public	double diesel_vol,diesel_price;  
-		day(int petrol_price,int petrol_vol,double diesel_price,double diesel_vol){
+		day(int petrol_vol,double diesel_vol,int petrol_price,double diesel_price){
 
 			this.petrol_price=petrol_price;
 			this.petrol_vol=petrol_vol;
@@ -28,31 +28,31 @@ public static class VIT_oil_corporation{
 		return a;
  }
 	
-
-	   }   
-	   double profit() {
+ //	return +a1Days.get(1).petrol_vol;
+	      
+	  String profit() {
         double totp=diesel_price+petrol_price;
 		double distributor_share = totp*49/100;              
    double VIT_share=totp*51/100;
+return "\tDistributor_Share: "+distributor_share+"\t VITshare: "+VIT_share+" " ;
 
-
-	   } 
+	   } }
 
 
 public static void main(String args[]){   
 	 //  day a= new day(1,2,2.5,2.7);
 	ArrayList<day> a1Days=new ArrayList<>();
-       a1Days.add(new day(1,2,3.5,5.5));
+      
        System.out.println("Passed place 1");
-	   a1Days.add(new day(2,3,4.5,6.5));
-	   a1Days.add(new day(2,3,4.5,6.5));
-	   a1Days.add(new day(2,3,4.5,6.5));
-	   a1Days.add(new day(2,3,4.5,6.5));
-	    
+	   a1Days.add(new day(2500,50,23366.226,52.2));
+	   a1Days.add(new day(4215,75,3994.28,65.48));
+	   a1Days.add(new day(3780,63,5085.6,78.24));
+	   a1Days.add(new day(2925,45,6196.75,82.65));
+	   a1Days.add(new day(65,76.52,4225,4438.16));
     for ( int i=0;i<a1Days.size();i++){
          
-	
-			System.out.println("Day"+(i+1)+"\t"+a1Days.get(i) +""+ "Distributor's share"+""+"");
+		//int distributorshare=a1Days.get(i).
+			System.out.println("Day"+(i+1)+"\t"+a1Days.get(i) +a1Days.get(i).profit());
        
 
 	}
