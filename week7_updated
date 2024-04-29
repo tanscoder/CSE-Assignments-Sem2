@@ -1,0 +1,61 @@
+
+import java.util.*;
+
+
+public class Week7 {
+public static class VIT_oil_corporation{
+ static class day{
+	public 	int petrol_price,petrol_vol;
+	public	double diesel_vol,diesel_price;  
+		day(int petrol_price,int petrol_vol,double diesel_price,double diesel_vol){
+
+			this.petrol_price=petrol_price;
+			this.petrol_vol=petrol_vol;
+			this.diesel_vol=diesel_vol;
+ 			this.diesel_price=diesel_price;
+
+
+		}
+ public  String toString(){
+	//   int petrol_price=Math.round(petrol_price);
+
+			return " Petol price: "+Math.round(petrol_price)+"   Petrol volume: "+Math.round(petrol_price)  +"   Diesel price: "+diesel_price+"   Diesel volume: "+diesel_vol;
+ }
+	
+ double tot_vol(){
+ 
+		double a=petrol_vol+diesel_vol;
+		return a;
+ }
+	
+
+	   }   
+	   double profit() {
+        double totp=diesel_price+petrol_price;
+		double distributor_share = totp*49/100;              
+   double VIT_share=totp*51/100;
+
+
+	   } 
+
+
+public static void main(String args[]){   
+	 //  day a= new day(1,2,2.5,2.7);
+	ArrayList<day> a1Days=new ArrayList<>();
+       a1Days.add(new day(1,2,3.5,5.5));
+       System.out.println("Passed place 1");
+	   a1Days.add(new day(2,3,4.5,6.5));
+	   a1Days.add(new day(2,3,4.5,6.5));
+	   a1Days.add(new day(2,3,4.5,6.5));
+	   a1Days.add(new day(2,3,4.5,6.5));
+	    
+    for ( int i=0;i<a1Days.size();i++){
+         
+	
+			System.out.println("Day"+(i+1)+"\t"+a1Days.get(i) +""+ "Distributor's share"+""+"");
+       
+
+	}
+
+}
+}}
