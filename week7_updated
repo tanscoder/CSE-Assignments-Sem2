@@ -17,17 +17,10 @@ public class Week_7 {
                 this.diesel_vol=diesel_vol;
             }
             
-            public void Arr(int i,int ptvol,int ptprs,double dieselvol, double dieselprc){
-
-                 ArrayList<VIT_oil_corporation> a1= new ArrayList<VIT_oil_corporation>();
-
-
-            }
-
+    
 
             public  String toString(){
-                //   int petrol_price=Math.round(petrol_price);
-
+            
                 return "\t Petrol price: "+petrol_price+" /-"+"\tPetrol volume: "+petrol_vol +" Litres " +"\tDiesel price: "+diesel_price+" /-"+"\tDiesel volume: "+diesel_vol+" Litres";  }
 
           public  double tot_vol(){
@@ -43,7 +36,6 @@ public class Week_7 {
 
             }
 
-            //	return +a1Days.get(1).petrol_vol;
 
             String profit() {
                 double totp=diesel_price+petrol_price;
@@ -54,7 +46,7 @@ public class Week_7 {
             } }
 
         public static void main(String [] args){
-            //  day a= new day(1,2,2.5,2.7);
+      
 
 
             System.out.println("Passed place 1");
