@@ -1,0 +1,63 @@
+public class VITHiappl { 
+ private final Object chatLock=new Object( );
+private final Object video_callLock=new Object( );
+private final Object callLock =new Object( );
+
+    public  void chat  (){ 
+    	
+		synchronized( chatLock){ 
+      
+		System.out.println(" Chat has begun !!! ");
+
+       
+        	try { 
+ 		   for (int i=0;i<20;i++){ 
+				System.out.println(" chatting now "+i + "seconds\n");   
+						Thread.sleep(1000);
+                       if (i==10 ){ 
+ chatLock.wait();     System.out.println("\n caht resumed" );}
+											}
+		
+				System.out.println( "\n Chat waiting  for video call to end  " );
+     		
+				
+                    
+		            			
+
+		}catch( Exception e ){Thread.currentThread().interrupt(); }
+
+				}
+		}
+
+
+    public  void videoCall( ){ 
+  		synchronized(chatLock){
+			    try   {        Thread.sleep( 2000);
+
+				for( int i =0;i<5;i++)  {
+
+					System.out.println( " \n video call happenning now  " +i+" seconds" );
+			                                                                                                          
+                                       Thread.sleep(1000);                                                                                                                                                                    
+                                                                           }                    
+			  	     }catch(Exception e ){ }						
+			
+					   chatLock.notify ();
+					
+
+						}    	                  
+		  }
+
+        
+public static void main(String [ ] args ){ 
+
+	VITHiappl app= new VITHiappl();
+
+	Thread chatThr = new Thread ( () ->{    app.chat();   } );
+     Thread  callThr = new Thread (  () -> {   app.videoCall(); }) ;
+      chatThr.start( );
+	callThr.start( );
+
+	}
+
+}
